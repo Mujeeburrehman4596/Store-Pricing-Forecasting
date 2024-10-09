@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Store Price Forecasting</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <h2 class="text-center">Store Price Forecasting</h2>
+    <div class="card mt-4">
+      <div class="card-header bg-primary text-white">
+        Input Historical Prices
+      </div>
+      <div class="card-body">
+        <form id="price-form">
+          <div class="form-group">
+            <label for="price-input">Enter Historical Prices (comma-separated):</label>
+            <input type="text" class="form-control" id="price-input" placeholder="e.g. 100, 120, 130, 150">
+          </div>
+          <div class="form-group">
+            <label for="days-input">Forecast for how many future days?</label>
+            <input type="number" class="form-control" id="days-input" placeholder="e.g. 5">
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Predict Future Prices</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="card mt-4">
+      <div class="card-header bg-success text-white">
+        Forecasted Prices
+      </div>
+      <div class="card-body">
+        <ul id="forecast-results" class="list-group">
+          <!-- Forecasted prices will appear here -->
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
